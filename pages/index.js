@@ -1,7 +1,5 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-import soundCloud from '../asset/images/sound-cloud.png'
 import Link from 'next/link'
 
 export default function Home() {
@@ -14,20 +12,10 @@ export default function Home() {
       </Head>
 
       <main>
-      <div className="grid justify-items-center">
-        <div>
-          <Image
-            src={soundCloud}
-            width={500}
-            height={500}
-          />  
+        <div className="grid justify-items-center">
+          <Link href="/soundcloud">Soundcloud</Link>
+          <Link href="/walmart">Walmart</Link>
         </div>
-        <div className='bg-orange-500'>
-          <Link href='/checkout-details' className='text-gray-100 text-2xl p-2 w-full' >
-            continue with card payment
-          </Link>
-        </div>
-      </div>
       </main>
     </div>
   )

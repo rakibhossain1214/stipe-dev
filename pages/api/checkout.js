@@ -13,7 +13,7 @@ export default async function handler(req, res) {
                   quantity: 1,
                 },
               ],
-              success_url: `${process.env.CLIENT_URL}/api/success?session_id={CHECKOUT_SESSION_ID}&payment_method=${req.body.paymentMethod}&name=${req.body.name}&surname=${req.body.surname}&email=${req.body.email}&cpf=${req.body.cpf}&Check1=${req.body.Check1}`,
+              success_url: `${process.env.CLIENT_URL}/api/success?session_id={CHECKOUT_SESSION_ID}&email=${req.body.email}&billing=${req.body.billing}&payment=${req.body.payment}&address=${req.body.address}&fullName=${req.body.fullName}&cvc=${req.body.cvc}&date=${req.body.date}`,
         
               cancel_url: `${process.env.CLIENT_URL}/api/cancel`,
             })
