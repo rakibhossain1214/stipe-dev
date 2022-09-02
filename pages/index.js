@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import soundCloud from '../asset/images/sound-cloud.png'
+import Link from 'next/link'
 
 export default function Home() {
   return (
@@ -13,7 +14,7 @@ export default function Home() {
       </Head>
 
       <main>
-      <div class="grid justify-items-center">
+      <div className="grid justify-items-center">
         <div>
           <Image
             src={soundCloud}
@@ -22,9 +23,9 @@ export default function Home() {
           />  
         </div>
         <div className='bg-orange-500'>
-          <a href='/checkout-details' className='text-gray-100 text-2xl p-2 w-full' >
+          <Link href='/checkout-details' className='text-gray-100 text-2xl p-2 w-full' >
             continue with card payment
-          </a>
+          </Link>
         </div>
       </div>
       </main>
